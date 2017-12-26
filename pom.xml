@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>newcorretora-api</groupId>
+  <artifactId>newcorretora-api</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  	<properties>
+		<!-- Build independente de plataforma -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- Versão do Java -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<!-- A partir do Java EE 6 nao necessita do web.xml -->
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
+
+	<dependencies>
+		<!--Compile -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+		</dependency>
+		<!--Provided -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.4.1.Final</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.5.4.redhat-1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.4.redhat-1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Teste -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>2.9.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-common</artifactId>
+			<version>2.26-b09</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-client</artifactId>
+			<version>3.1.2.Final</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>1.7.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito2</artifactId>
+			<version>1.7.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+	</build>
+</project>
