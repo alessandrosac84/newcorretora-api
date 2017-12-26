@@ -1,0 +1,40 @@
+PayPal - A maneira fácil e segura de enviar pagamentos online!PayPal - A maneira fácil e segura de enviar pagamentos online!  
+A API disponibiliza seus dados de busca no formato JSON. Confira a URL base de acesso a API:
+
+https://fipe.parallelum.com.br/api/v1
+
+Marcas
+
+Primeiro liste as marcas do tipo de veículo que você deseja, através da ação marcas e sem nenhum parâmetro:
+
+Request
+GET: https://fipe.parallelum.com.br/api/v1/carros/marcas
+
+Você pode alterar na url "carros" para "motos" ou "caminhoes" de acordo com a sua necessidade.
+
+Reponse
+Modelos
+
+Na sequencia você poderá obter a listagem de veículos de uma determinada marca, com o código da marca desejada. Por exemplo a marca VW - VolksWagen (59):
+
+Request
+GET: https://fipe.parallelum.com.br/api/v1/carros/marcas/59/modelos
+
+Reponse
+Anos
+
+Após escolher o veículo desejado é possível consultar os modelos e os anos disponíveis para uma futura consulta de preços. Por exemplo AMAROK High.CD 2.0 16V TDI 4x4 Dies. Aut:
+
+Request
+GET: https://fipe.parallelum.com.br/api/v1/carros/marcas/59/modelos/5940/anos
+
+Reponse
+Valor
+
+Por fim adicionando mais um parâmetro será possível visualizar o preço corrente da Tabela FIPE para este veículo/modelo/ano. Continuando com o exemplo a cima para obter o valor de um veículo do ano 2014 a Gasolina utilizaremos o id 2014-3:
+
+Request
+GET: https://fipe.parallelum.com.br/api/v1/carros/marcas/59/modelos/5940/anos/2014-3
+
+Reponse
+Com isto descubrimos os detalhes do veículo AMAROK High.CD 2.0 16V TDI 4x4 Dies. Aut ano 2014 a Diesel.
